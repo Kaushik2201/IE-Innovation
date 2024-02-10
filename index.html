@@ -4,6 +4,58 @@
 <head>
     <meta charset="utf-8">
     <title>Innovation</title>
+
+    <style>
+        /* Add your custom CSS styles here */
+        .typewriter-text {
+            overflow: hidden; /* Ensures the text is not revealed until the animation */
+            border-right: .15em solid black; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: rgb(11, 249, 3)}
+        }
+
+        /* Define the animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply the animation to the paragraph */
+        #Hi {
+            animation: fadeIn 1.5s ease-in-out;
+            font-size: x-large;
+        }
+        #userCount {
+            font-size: 18px;
+            color: #333;
+            margin-top:20px;
+        }
+        #userCount2 {
+            font-size: 18px;
+            color: #333;
+            margin-top:20px;
+        }
+
+    </style>
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -44,37 +96,44 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 ">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="m-0"></h1>
-                    <img src="img/Logo.png" alt="Logo"> 
+                    <div style="display: block;">
+                        <img src="img/Logo.png" alt="Logo"> 
+                        <img src="img/IIC.png" alt="logo">
+                    </div>
+
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <a href="#pricing" class="nav-item nav-link">Schedule</a>
-                        <a href="#review" class="nav-item nav-link">Review</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+
+                        <a href="#home" class="nav-item nav-link active" style="color: black !important;">Home</a>
+                        <a href="#about" class="nav-item nav-link" style="color: black !important;">About</a>
+                        <a href="#feature" class="nav-item nav-link" style="color: black !important;">Feature</a>
+                        <a href="#pricing" class="nav-item nav-link" style="color: black !important;">Schedule</a>
+                        <a href="#review" class="nav-item nav-link" style="color: black !important;">Review</a>
+                        <a href="#contact" class="nav-item nav-link" style="color: black !important;">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Sign In</a>
+                    <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block text-black-50 " style="color: black !important;">Sign In</a>
                 </div>
             </nav>
+
 
             <div class="container-xxl bg-primary hero-header">
                 <div class="container px-lg-5">
                     <div class="row g-5">
-                        <div class="col-lg-8 text-center text-lg-start">
-                            <img src="img/IIC.png" width="200" height="100" >
-                            <h1 class="text-dark mb-4 animated slideInDown">Welcome to Innovation</h1>
-                            <p class="text-white pb-3 animated slideInDown">An esteemed platform meticulously crafted for individuals to flaunt their prowess and talents, showcasing a myriad of skills in a dazzling digital spectacle.
-                            </p>
-                            <a href="#about" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
-                            <a href="#contact" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                        <div class="col-lg-8 text-center text-lg-start " style="position: relative; top: 70px;">
+                            <!-- Add a span element with class "typewriter-text" for the typewriter effect -->
+                            <h1 class="text-white mb-4" style="color: black !important;"><span class="typewriter-text">Welcome to Innovation</span></h1>
+                            <p class="text-black pb-3" id="Hi" style="color: black !important;">An esteemed platform meticulously crafted for individuals to flaunt their prowess and talents, showcasing a myriad of skills in a dazzling digital spectacle.</p>
+                            <a href="#about" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft" style="color: black !important;">Submit Your Proposal Now !!</a>
+                            <a href="#contact" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight" style="color: black !important;">Book Your Tickets Now !!</a>
+
                         </div>
                         <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
                             <div class="owl-carousel screenshot-carousel">
@@ -88,7 +147,10 @@
                     </div>
                 </div>
             </div>
+
         </div>
+    </div>
+
         <!-- Navbar & Hero End -->
 
 
@@ -97,7 +159,8 @@
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">About App</h5>
+                        <h5 class="text-primary-gradient fw-medium"></h5>
+
                         <h1 class="mb-4">Explore more about Innovation</h1>
                         <p class="mb-4">Our college technical events website embodies a spirit of innovation, excellence, and collaboration, fostering cutting-edge creativity, empowering individuals to advance their skills, and inspiring networking and knowledge-sharing opportunities within a diverse and resilient community.</p>
                         <div class="row g-4 mb-4">
@@ -105,8 +168,10 @@
                                 <div class="d-flex">
                                     <i class="fa fa-cogs fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
                                     <div class="ms-3">
-                                        <h2 class="mb-0 users" data-toggle="counter-up">0</h2>
-                                        <p class="text-primary-gradient mb-0">No of Users</p>
+
+                                        <h2 class="mb-0" data-toggle="counter-up" id="userCount">0</h2>
+                                        <p class="text-primary-gradient mb-0" style="font-size: larger;">No of Users</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -114,13 +179,17 @@
                                 <div class="d-flex">
                                     <i class="fa fa-comments fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
                                     <div class="ms-3">
-                                        <h2 class="mb-0" data-toggle="counter-up">0</h2>
-                                        <p class="text-secondary-gradient mb-0">Projects Submitted</p>
+
+                                        <h2 class="mb-0" data-toggle="counter-up" id="userCount2">0</h2>
+                                        <p class="text-secondary-gradient mb-0"style="font-size: larger;" >Projects Submitted</p>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Schedule</a>
+
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3" style="color: black !important;">Schedule</a>
+
                     </div>
                     <div class="col-lg-6">
                         <img class=" img-fluid wow faseInup" data-wow-delay="0.5s" src="img/aboutus.png">
@@ -135,8 +204,10 @@
         <div class="container-xxl py-5" id="feature">
             <div class="container py-5 px-lg-5">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+
                     <h5 class="text-primary-gradient fw-medium">Events</h5>
                     <h1 class="mb-5">Ongoing</h1>
+
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -144,8 +215,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-eye text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 1</h5>
                             <p class="m-0">Description: </p>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -153,8 +226,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-layer-group text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 2</h5>
                             <p class="m-0">Description:</p>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -162,8 +237,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-edit text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 3</h5>
                             <p class="m-0">Description: </p>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -171,8 +248,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-shield-alt text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 4</h5>
                             <p class="m-0">Description: </p>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -180,8 +259,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-cloud text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 5</h5>
                             <p class="m-0">Description: </p>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -189,8 +270,10 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-mobile-alt text-white fs-4"></i>
                             </div>
+
                             <h5 class="mb-3">Event 6</h5>
                             <p class="m-0">Description: </p>
+
                         </div>
                     </div>
                 </div>
@@ -201,6 +284,7 @@
 
 
         
+
 
         <!-- Sponsors Start -->
         <div class="container-xxl py-5" id="review">
@@ -245,11 +329,13 @@
                     </div>
                     <div class="testimonial-item rounded p-4 feature-item bg-color">
                         <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/sponsors.png" style="width: 150px; height: 150px;">
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- Testimonial End -->
+
 
 
         <!-- Map start-->
@@ -265,6 +351,7 @@
             </div>
         </div>
         <!-- Map end -->
+
         
 
         <!-- Footer Start -->
@@ -332,7 +419,9 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2" id="HH"><i class="bi bi-arrow-up text-white"></i></a>
+
     </div>
 
     <!-- JavaScript Libraries -->
@@ -343,6 +432,66 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+        // JavaScript for the typewriter effect
+        document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.getElementsByClassName('typewriter-text');
+            for (var i = 0; i < elements.length; i++) {
+                var txt = elements[i].textContent;
+                elements[i].textContent = '';
+                typeWriter(elements[i], txt);
+            }
+        });
+        
+
+        function typeWriter(element, text) {
+            var speed = 50; // Adjust speed as needed
+            var i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        window.addEventListener("load", function() {
+        // Hardcoded user count
+        const userCount = 10000;
+        for(let i = 1; i<= userCount; i = i*100){
+            document.getElementById('userCount').innerHTML = i;
+        }
+        }); 
+
+        var currentPageRoute;
+        window.addEventListener('load', function(e){
+            currentPageRoute = window.location.href;
+            console.log("Current Page Route:", currentPageRoute);
+            
+        });
+        // Check if the page is being refreshed
+        if (window.performance) {
+        if (performance.navigation.type === 1) {
+        // Page is being refreshed, redirect to the home page
+            window.location.href = "index.html";
+        }
+}
+
+        window.addEventListener("load", function() {
+        // Hardcoded user count
+        const userCount = 1000;
+        for(let i = 1; i<= userCount; i = i*2){
+            document.getElementById('userCount2').innerText = i;
+        }
+        document.getElementById('userCount2').innerText = userCount;
+        });
+
+    </script>
+    
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

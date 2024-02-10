@@ -48,6 +48,7 @@ function scrollHandler(e){
 
 scrollHandler();
 line.style.display = 'block';
+
 window.addEventListener('scroll', scrollHandler)
 
 
@@ -260,3 +261,6 @@ window.kontext = function( container ) {
     if( event.keyCode === 37 ) k.prev();
     if( event.keyCode === 39 ) k.next();
   }, false );
+
+window.addEventListener('scroll', scrollHandler)
+
